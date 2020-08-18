@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="fostering.css"></link>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var y = document.forms["myForm"]["lname"].value;
+  var z = document.forms["myForm"]["email"].value;
+
+if (x == "") {
+    alert("First name must be filled out");
+    return false;
+ 		 }
+  if (y == "") {
+   alert("Last name must be filled out");
+    return false;
+	}
+	if (z == "") {
+    	alert("What's your email?");
+        return false;
+       }}
+</script>
+</head>
+<body>
+<body style="background-color: #f2cc8f;">
+<h1 style="color:black;">Contact</h1>
+
+
+<form name="myForm" action="thankyoucat.html" onsubmit="return validateForm()" method="post">
+  First Name*: <input type="text" name="fname">
+  <br></br>
+
+  Last name*:<input type="text" name="lname"><br></br>
+
+ Email*:<input type="text" name="email">
+ 
+<br></br>
+
+Message: 
+<textarea id="comment" name="comment" rows="6" cols="40"></textarea>
+<div></div>
+<br></br>
+<label for="newsletter">Would you like to subscribe to our newsletter?</label>
+<br></br>
+<input type="radio" name="yes">Subscribe me!</input>
+<br></br>
+<input type="radio" name="no">Not right now, thanks.</input>
+<br></br>
+
+
+  <input type="submit" value="Submit"> 
+</form>
+
+<div class="footer">
+		<footer><a href="home.html">Site Map</a></footer>
+		</div>
+	
+</body>
+</html>
+
+
