@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee Portal</title>
+
+<script>
+
+function validateForm() {
+  var x = document.forms["Feedback"]["caseID"].value;
+  var y = document.forms["Feedback"]["subject"].value;
+  var z = document.forms["Feedback"]["comment"].value;
+
+if (x == "") {
+    alert("What is the CaseID?");
+    return false;
+ 		 }
+  if (y == "") {
+   alert("Please enter something in the subject field");
+    return false;
+	}
+	if (z == "") {
+    	alert("Any comments?");
+        return false;
+       }}
+</script>
+</head>
+<style>
+
+body{
+	background-image: linear-gradient(#bc6a6c, #a63635);
+    }
+    
+.container{
+    padding:10px;
+    margin-right:10%;
+    margin-left:10%;
+    background-color:white;
+    }
+    
+   .header-container{
+    clear:both;
+   	width:80%;
+    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    }
+    
+  .main-container{
+  	width:50%;
+  	display:inline-block;
+    margin-right:10%;
+    margin-left:auto;
+    height: 380px;
+    background-color:pink;
+    }
+  
+  .sidebar{
+  	width:25%;
+  	height: 380px;
+  	display:inline;
+    margin-left:10%;
+    margin-right:auto;
+    float:left;
+    background-color:darkred;
+    }
+    
+    	
+  .foot-container{
+	clear: both;
+	background-color:white;
+	padding : 10px;
+	text-align:center;
+    margin-right:10%;
+    margin-left:10%;
+	}
+    
+  .form{
+  	
+  	background-color:#E7A5BB;
+   	display: inline-block;
+    width: 550;
+    margin-left:30px;
+    margin-bottom:10px;
+    margin-right:50px;
+    margin-top:30px;
+    float:right;
+    }
+    
+   label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    }
+    
+    input{
+    display:inline-block;
+    float:left;
+    }
+    
+    
+    
+</style>
+</head>
+
+<body>
+
+
+<div class="container"></div>
+	<div class="header-container">
+		<img src="umd_logo.png"></img>
+    </div>
+    
+<div class="main-container">
+
+	<p><b>Please complete following form.</b></p>
+
+	<div class="form">
+
+	<form name="Feedback" method="post" onsubmit="return validateForm()" action="MakowskiAssignment3ThankYou.html">
+		<p style="color:red">FEEDBACK</p>
+
+			<label for="CaseID:">CaseID:</label>
+				<input type="text" name="caseID">
+				<br></br>
+
+			<label for="Subject:">Subject:</label>
+				<span style="color:red">*</span>
+				<input type="text" name="subject"></input>
+				<br></br>
+
+			<label for="Comment:">Comment:</label>
+				<span style="color:red">*</span>
+				<textarea id="comment" name="comment" rows="6" cols="40"></textarea>
+					<br></br>
+
+			<input type="image" src="btn_submit.gif" alt="submit" value="Submit"></input>
+
+	</form>
+</div>
+</div>
+
+<aside class="sidebar">
+    <img src="arrow.gif" style="display:inline-block;"></img>
+   	 <p style="display:inline-block; color:yellow; text-decoration:underline;">Feedback</p>
+</aside>
+
+<div class="foot-container">
+	Copyright (C) UMD. All Rights Reserved. 
+</div>
+
+</div>
+</body>
+
+</html>
